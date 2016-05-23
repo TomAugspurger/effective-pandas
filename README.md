@@ -3,6 +3,8 @@
 A collection of notebooks behind my [series](http://tomaugspurger.github.io/modern-1.html) on
 writing idiomatic pandas.
 
+(Work in progress not all notebooks will work right now)
+
 ## Contents
 
 - [Modern Pandas](modern-1-intro.ipynb)

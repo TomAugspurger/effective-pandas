@@ -1,0 +1,16 @@
+table { width: 53%;
+        text-align: right;
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 1.4rem;
+        margin-bottom: 1.4rem;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-top: 2px solid #333333;
+        border-bottom: 2px solid #333333;
+        border-collapse: separate;
+        border-spacing: 0 5px;
+        -webkit-font-feature-settings: 'tnum'; /* This is technically redundant */
+        -moz-font-feature-settings: 'tnum';
+        -ms-font-feature-settings: 'tnum'; }
+

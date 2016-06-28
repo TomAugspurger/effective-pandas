@@ -5,12 +5,12 @@ writing idiomatic pandas.
 
 ## Contents
 
-- [Modern Pandas](modern-1-intro.ipynb)
-- [Method Chaining](modern-2-method-chaining.ipynb)
-- [Indexes](modern-3-indexes.ipynb)
-- [Fast Pandas](modern-4-performance.ipynb)
-- [Tidy Data](modern-5-tidy.ipynb)
-- [Visualization](modern-6-visualization.ipynb)
-- [Time Series](modern-7-timeseries.ipynb)
-- [Out of Core](modern-8-out-of-core.ipynb) (partial)
+- [Modern Pandas](modern_1_intro.ipynb)
+- [Method Chaining](modern_2_method_chaining.ipynb)
+- [Indexes](modern_3_indexes.ipynb)
+- [Fast Pandas](modern_4_performance.ipynb)
+- [Tidy Data](modern_5_tidy.ipynb)
+- [Visualization](modern_6_visualization.ipynb)
+- [Time Series](modern_7_timeseries.ipynb)
+- [Out of Core](modern_8_out_of_core.ipynb) (partial)
 

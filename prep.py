@@ -1,4 +1,7 @@
+import os
+from functools import wraps
 import pandas as pd
+from sklearn.externals import joblib
 
 def _repr_html_(self):
     if self.index.nlevels > 1:
@@ -11,4 +14,21 @@ def _repr_html_(self):
         return self.to_html(max_rows=max_rows, max_cols=max_cols,
                             show_dimensions=show_dimensions, notebook=True)
 
-pd.DataFrame._repr_html_ = _repr_html_
+if int(os.environ.get("MODERN_PANDAS_EPUB", 0)):
+    pd.DataFrame._repr_html_ = _repr_html_
+
+
+def cached(name):
+    def deco(func):
+
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            os.makedirs('models', exist_ok=True)
+            cache = os.path.join('models', name + '.pkl')
+            if os.path.exists(cache):
+                return joblib.load(cache)
+            result = func(*args, **kwargs)
+            joblib.dump(result, cache)
+            return result
+        return wrapper
+    return deco

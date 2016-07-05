@@ -17,7 +17,7 @@ all_markdown_processed: markdown/modern_1_intro_processed.md \
 			markdown/modern_7_timeseries_processed.md
 
 
-markdown/modern.epub: all_markdown markdown/style.css
+markdown/modern.epub: all_markdown_processed markdown/style.css
 	cd markdown && \
 	pandoc -f markdown-markdown_in_html_blocks --epub-stylesheet=style.css --chapters -S -o $(notdir $@) \
 	    title.txt \

@@ -56,7 +56,14 @@ markdown/%.md: %.ipynb
 markdown/%_processed.md: markdown/%.md
 	pandoc -f markdown-markdown_in_html_blocks $< | pandoc -f html -t markdown+pipe_tables -o $@
 
-def test/%.pdf:
-	$(eval OUT:=$(basename $(notdir $@)))
-	echo $(OUT)
+markdown/sample.epub: markdown/modern_1_intro_processed.md
+	cd markdown && \
+	pandoc -f markdown-markdown_in_html_blocks --epub-cover-image=../cover/modern-pandas-cover.png --epub-stylesheet=style.css --chapters -S -o $(notdir $@) \
+	title.txt \
+	modern_1_intro_processed.md
 
+markdown/sample.pdf: markdown/modern_1_intro_processed.md
+	cd markdown && \
+	pandoc -f markdown-markdown_in_html_blocks -V documentclass=memoir -S --latex-engine=xelatex --template=$(HOME)/.pandoc/templates/default.latex -o $(notdir $@) \
+		title.txt \
+		modern_1_intro_processed.md

@@ -1,6 +1,6 @@
 # Effective Pandas
 
-![cover/modern-pandas-cover.png](Effective Pandas)
+![Effective Pandas](cover/modern-pandas-cover.png)
 
 A collection of notebooks behind my [series](http://tomaugspurger.github.io/modern-1.html) on
 writing idiomatic pandas.

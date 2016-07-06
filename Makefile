@@ -67,3 +67,9 @@ markdown/sample.pdf: markdown/modern_1_intro_processed.md
 	pandoc -f markdown-markdown_in_html_blocks -V documentclass=memoir -S --latex-engine=xelatex --template=$(HOME)/.pandoc/templates/default.latex -o $(notdir $@) \
 		title.txt \
 		modern_1_intro_processed.md
+
+test.epub: markdown/modern_1_intro_processed.md
+	cd markdown && \
+	pandoc -f markdown-markdown_in_html_blocks $(notdir $<) | pandoc -f html -t markdown+pipe_tables -o test_processed.md && \
+	pandoc -f markdown-markdown_in_html_blocks --epub-cover-image=../cover/modern-pandas-cover.png --epub-stylesheet=style.css --chapters -S -o $(notdir $@) \
+	test_processed.md

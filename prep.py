@@ -4,9 +4,15 @@ import pandas as pd
 from sklearn.externals import joblib
 
 def _repr_html_(self):
+    self = self.copy()
+
     if self.index.nlevels > 1:
         return None
     else:
+        name = self.index.name or 'index'
+        if self.columns.name is None:
+            self.columns.name = name
+
         max_rows = pd.get_option("display.max_rows")
         max_cols = pd.get_option("display.max_columns")
         show_dimensions = pd.get_option("display.show_dimensions")

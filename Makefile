@@ -19,7 +19,7 @@ all_markdown_processed: markdown/modern_1_intro_processed.md \
 
 markdown/modern.epub: all_markdown_processed markdown/style.css
 	cd markdown && \
-	pandoc -f markdown-markdown_in_html_blocks --epub-stylesheet=style.css --chapters -S -o $(notdir $@) \
+	pandoc -f markdown-markdown_in_html_blocks --epub-cover-image=../cover/modern-pandas-cover.png --epub-stylesheet=style.css --chapters -S -o $(notdir $@) \
 	    title.txt \
 		modern_1_intro_processed.md \
 		modern_2_method_chaining_processed.md \
@@ -32,7 +32,8 @@ markdown/modern.epub: all_markdown_processed markdown/style.css
 
 markdown/modern.pdf: all_markdown_processed
 	cd markdown && \
-	pandoc -f markdown-markdown_in_html_blocks -V documentclass=memoir --chapters -S --latex-engine=xelatex --template=$(HOME)/.pandoc/templates/default.latex -o $(notdir $@) \
+	pandoc -f markdown-markdown_in_html_blocks -V documentclass=memoir --chapters -S --latex-engine=xelatex --toc --template=$(HOME)/.pandoc/templates/default.latex -o $(notdir $@) \
+	    title.txt \
 		modern_1_intro_processed.md \
 		modern_2_method_chaining_processed.md \
 		modern_3_indexes_processed.md \

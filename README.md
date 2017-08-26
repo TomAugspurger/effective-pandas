@@ -15,4 +15,3 @@ writing idiomatic pandas.
 - [Visualization](modern_6_visualization.ipynb)
 - [Time Series](modern_7_timeseries.ipynb)
 - [Out of Core](modern_8_out_of_core.ipynb) (partial)
-

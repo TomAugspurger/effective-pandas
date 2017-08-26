@@ -6,3 +6,4 @@ models/
 *.pdf
 *.epub
 *.fthr
+__pycache__

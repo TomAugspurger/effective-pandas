@@ -7,3 +7,8 @@ matplotlib
 statsmodels
 seaborn
 jupyter
+
+# Resolve inconsistent requirements on prompt_toolkit
+prompt_toolkit<2.0
+ipython<7.0
+jupyter-console<6.0

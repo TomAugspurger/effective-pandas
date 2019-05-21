@@ -2,7 +2,7 @@
 
 ![Effective Pandas](cover/modern-pandas-cover.png)
 
-A collection of notebooks behind my [series](http://tomaugspurger.github.io/modern-1.html) on
+A collection of notebooks behind my [series](http://tomaugspurger.github.io/modern-1-intro.html) on
 writing idiomatic pandas.
 
 ## Contents

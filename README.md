@@ -5,6 +5,8 @@
 A collection of notebooks behind my [series](http://tomaugspurger.github.io/modern-1-intro.html) on
 writing idiomatic pandas.
 
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/TomAugspurger/effective-pandas/master)
+
 ## Contents
 
 - [Modern Pandas](modern_1_intro.ipynb)

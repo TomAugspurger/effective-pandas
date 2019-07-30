@@ -1,0 +1,10 @@
+requests
+pandas
+pandas-datareader
+feather-format
+dask
+matplotlib
+statsmodels
+seaborn
+jupyter
+

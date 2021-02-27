@@ -1,7 +1,7 @@
 import os
 from functools import wraps
 import pandas as pd
-from sklearn.externals import joblib
+import joblib
 
 def _repr_html_(self):
     self = self.copy()

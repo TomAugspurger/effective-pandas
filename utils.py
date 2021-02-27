@@ -121,7 +121,7 @@ def download_airports():
     ]
 
     r = requests.post('https://www.transtats.bts.gov/DownLoad_Table.asp', headers=headers, params=params, cookies=cookies, data=data)
-    with open("data/airports.csv.zip") as f:
+    with open("data/airports.csv.zip", "wb") as f:
         f.write(r.content)
 
 
